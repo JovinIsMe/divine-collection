@@ -1,3 +1,16 @@
+# Starting the Project
+```
+nvm use 14.17.1
+npm start
+```
+
+# Install Firebase CLI
+```
+npm install -g firebase-tools
+firebase emulators:start
+firebase deploy
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
