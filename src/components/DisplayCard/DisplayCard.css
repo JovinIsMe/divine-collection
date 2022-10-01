@@ -3,8 +3,10 @@
 }
 
 .DisplayCard-image {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  -webkit-transition: all 350ms ease;
+  transition: all 350 ease;
+  cursor: pointer;
   background-color: black;
   justify-content: center;
   object-fit: contain;

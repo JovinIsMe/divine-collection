@@ -5,7 +5,7 @@ const DisplayCard = () => {
   return (
     <div className='DisplayCard-container'>
       <img src={image} className='DisplayCard-image' alt='image' />
-      <div className='DisplayCard-text'>filename</div>
+      {/* <div className='DisplayCard-text'>filename</div> */}
     </div>
   )
 }
