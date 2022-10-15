@@ -9,12 +9,14 @@ const Header = () => {
   return (
     <div className='Header-container'>
       <Logo/>
-      <ul className='Header-topnav'>
-        <li><a href="/">Home</a></li>
-        { !userId && <li><a href="/login">Login</a></li> }
-        { userId && <li><a href="/collections">Collections</a></li> }
-        { userId && <li><a href="/logout">Logout</a></li> }
-      </ul>
+      <div className='Header-topnav'>
+        <ul>
+          <li><a href="/">Home</a></li>
+          { !userId && <li><a href="/login">Login</a></li> }
+          { userId && <li><a href="/collections">Collections</a></li> }
+          { userId && <li><a href="/logout">Logout</a></li> }
+        </ul>
+      </div>
     </div>
   );
 }

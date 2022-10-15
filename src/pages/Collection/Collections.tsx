@@ -6,6 +6,7 @@ import Cookies from 'universal-cookie';
 import { useEffect, useState } from 'react';
 import { db } from '../../firebase-config';
 import { getDoc, doc, DocumentData } from 'firebase/firestore';
+import './Collections.css';
 
 const userId = new Cookies().get('user_id');
 
@@ -28,7 +29,7 @@ const Collection = () => {
       <Header/>
       { !!userId && userId === collection._user_id && <><a href={"/collections/" + collectionId + "/new"} >New Image</a><br></br></> }
 
-      <div className='DisplayCardContainer' key={collectionId}>
+      <div className='Collection' key={collectionId}>
         <DisplayCard collectionId={collectionId}/>
       </div>
     </>

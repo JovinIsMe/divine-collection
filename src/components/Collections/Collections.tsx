@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import './DisplayCardContainer.css'
+import './Collections.css'
 import { db } from '../../firebase-config';
 import { collection, getDocs, query, where, DocumentData } from "firebase/firestore";
 
@@ -15,7 +15,7 @@ type CollectionProps = {
   // created_at: 
 }
 
-const DisplayCardContainer = (props:any) => {
+const Collections = (props:any) => {
   const { userId } = props;
 
   const [collections, setCollections] = useState<DocumentData>([]);
@@ -34,18 +34,20 @@ const DisplayCardContainer = (props:any) => {
   }, [userId]);
 
   return (
-    <>
-      {
-        collections.map((col:CollectionProps) => {
-          return (
-            <div key={col.id}>
-              <a href={"/collections/" + col.id}>{col.name}</a>
-            </div>
-          )
-        })
-      }
-    </>
+    <div className="UserCollections">
+      <ul>
+        {
+          collections.map((col:CollectionProps) => {
+            return (
+              <li key={col.id}>
+                <a href={"/collections/" + col.id}>{col.name}</a>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </div>
   )
 }
 
-export default DisplayCardContainer;
+export default Collections;

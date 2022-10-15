@@ -4,7 +4,7 @@ import { db } from '../../firebase-config';
 import { getDoc, DocumentData, doc } from "firebase/firestore";
 
 import Header from '../../layouts/Header/Header';
-import DisplayCardContainer from '../../components/DisplayCardContainer/DisplayCardContainer';
+import Collections from '../../components/Collections/Collections';
 import Cookies from 'universal-cookie';
 
 // type UserProps = {
@@ -39,13 +39,40 @@ const User = () => {
       <div className="User">
         {
           <div key={userId}>
-            <div>User ID: {userId}</div>
-            <div>Name: {user.name}</div>
-            <div>Desc: {user.desc}</div>
-            <div>Phone Number: {user.phone_number}</div>
-            <div>Email: {user.email}</div>
-            {/* <div>Last Sign In: "{user.last_sign_in}"</div> */}
-            <DisplayCardContainer userId={userId}/>
+            <h2>User Details</h2>
+            <table>
+              <tr>
+                <th>User ID</th>
+                <td>{userId}</td>
+              </tr>
+              <tr>
+                <th>Name</th>
+                <td>{user.name}</td>
+              </tr>
+              <tr>
+                <th>Desc</th>
+                <td>{user.desc}</td>
+              </tr>
+              <tr>
+                <th>Phone</th>
+                <td>{user.phone_number}</td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td>{user.email}</td>
+              </tr>
+              <tr>
+                <th>Last Sign In</th>
+                <td>
+                  {/* {user.last_sign_in} */}
+                </td>
+              </tr>
+            </table>
+
+            <hr/>
+
+            <h2>Collections</h2>
+            <Collections userId={userId}/>
           </div>
         }
       </div>

@@ -5,7 +5,7 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import User from './pages/User/User';
 import NewCollection from './pages/NewCollection/NewCollection';
-import Collection from './pages/Collection/Collection';
+import Collection from './pages/Collection/Collections';
 import NewImage from './pages/NewImage/NewImage';
 import Logout from './pages/Logout/Logout';
 import reportWebVitals from './reportWebVitals';

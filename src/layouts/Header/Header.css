@@ -1,6 +1,5 @@
 .Header-container {
   text-align: left;
-  width: 100%;
   padding: 20px;
   background-color: darkslategrey;
 }
@@ -9,26 +8,44 @@
   float: right;
   text-align: center;
   margin: 0 25px;
-  transform: translateY(-120%);
+  transform: translateY(-100%);
 }
 
-.Header-topnav a:hover {
-  color: gray;
-}
-
-.Header-topnav li {
+.Header-topnav ul li {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
-  position: relative;
   height: 44px;
   z-index: 1;
   vertical-align: top;
 }
 
-.Header-topnav li a {
+.Header-topnav ul li a {
   color: #f2f2f2;
   text-decoration: none;
   font-size: 20px;
   margin: 0 25px;
+}
+
+.Header-topnav ul li a:hover {
+  color: gray;
+}
+
+@media(max-width: 650px) {
+  .Header-container {
+    display: flow-root;
+  }
+  
+  .Header-topnav {
+    padding-top: 20px;
+    display:block;
+    background-color: darkslategrey;
+    transform: translateY(0%);
+    width: 100%;
+  }
+  
+  .Header-topnav ul li {
+    margin: 20px;
+    display: block;
+  }
 }
