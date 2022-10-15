@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { SyntheticEvent, useState } from "react";
 import { db } from "../../firebase-config";
 import { setDoc, doc } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
@@ -22,7 +22,7 @@ const NewCollection = () => {
     // created_at:Timestamp,
   });
   
-  const handleSubmit = async (event:any) => {
+  const handleSubmit = async (event:SyntheticEvent) => {
     event.preventDefault();
     if (collectionId === "") {
       const short = require('short-uuid');

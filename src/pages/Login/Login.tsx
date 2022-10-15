@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { SyntheticEvent, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 import './Login.css';
@@ -11,7 +11,7 @@ const Login = () => {
     userId: "",
   });
 
-  const handleSubmit = (event:any) => {
+  const handleSubmit = (event:SyntheticEvent) => {
     event.preventDefault();
     if (formData.userId) {
       const cookies = new Cookies();

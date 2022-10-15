@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { SyntheticEvent, useState } from "react";
 import { db } from "../../firebase-config";
 import { setDoc, doc } from "firebase/firestore";
 import { useParams } from "react-router-dom";
@@ -26,7 +26,7 @@ const NewImage = () => {
     // created_at:Timestamp,
   });
 
-  const handleSubmit = async(event:any) => {
+  const handleSubmit = async(event:SyntheticEvent) => {
     event.preventDefault();
     if (imageId === "") {
       const short = require('short-uuid');

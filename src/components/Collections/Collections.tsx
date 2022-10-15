@@ -1,21 +1,10 @@
 import { useState, useEffect } from "react";
 import './Collections.css'
+import CollectionProps from "../../types/firebase/CollectionProps";
 import { db } from '../../firebase-config';
 import { collection, getDocs, query, where, DocumentData } from "firebase/firestore";
 
-type CollectionProps = {
-  id: string
-  _user_id: string
-  name: string
-  desc: string
-  favorite: boolean
-  position: number
-  published: boolean
-  path: string
-  // created_at: 
-}
-
-const Collections = (props:any) => {
+const Collections = (props:{userId?: string}) => {
   const { userId } = props;
 
   const [collections, setCollections] = useState<DocumentData>([]);

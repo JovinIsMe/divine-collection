@@ -2,37 +2,24 @@
   padding: 20px;
 }
 
-.User-logo {
-  height: 40vmin;
-  pointer-events: none;
+.User table th {
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .User-logo {
-    animation: User-logo-spin infinite 20s linear;
-  }
+.User table {
+  max-width: 100%;
+  border: solid;
 }
 
-.User-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.User table td,
+.User table th {
+  padding: 10px 20px;
+}
+
+.User button {
+  border: none;
+  border-radius: 10px;
   color: white;
-}
-
-.User-link {
-  color: #61dafb;
-}
-
-@keyframes User-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 10px;
+  background-color: darkslategray;
 }

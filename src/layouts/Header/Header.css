@@ -34,6 +34,7 @@
 @media(max-width: 650px) {
   .Header-container {
     display: flow-root;
+    width: 100%;
   }
   
   .Header-topnav {

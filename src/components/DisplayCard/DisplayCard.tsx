@@ -1,25 +1,11 @@
 import { useState, useEffect } from "react";
 import './DisplayCard.css';
+import { ImageProps } from "../../types/firebase/ImageProps";
 import { db } from '../../firebase-config';
 import { collection, getDocs, query, where, DocumentData } from "firebase/firestore";
 
-type ImageProps = {
-  id: string
-  _collection_id: string
-  name: string
-  desc: string
-  url: string
-  width: number
-  height: number
-  total_bytes: number
-  favorite: boolean
-  position: number
-  published: boolean
-  path: string
-  // created_at:
-}
 
-const DisplayCard = (props:any) => {
+const DisplayCard = (props:{collectionId?: string}) => {
   const { collectionId } = props;
 
   const [images, setImages] = useState<DocumentData>([]);
