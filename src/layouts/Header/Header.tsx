@@ -1,19 +1,20 @@
 import './Header.css';
 
 import Cookies from 'universal-cookie';
+import Logo from '../../components/Logo/Logo';
 
 const Header = () => {
   const userId = new Cookies().get('user_id');
 
   return (
     <div className='Header-container'>
-      <span className='Header-title'>Divine Collection</span>
-      <span className='Header-topnav'>
-        { userId && <a href="/logout">Logout</a> }
-        { userId && <a href="/collections">Collections</a> }
-        { !userId && <a href="/login">Login</a> }
-        <a href="/">Home</a>
-      </span>
+      <Logo/>
+      <ul className='Header-topnav'>
+        <li><a href="/">Home</a></li>
+        { !userId && <li><a href="/login">Login</a></li> }
+        { userId && <li><a href="/collections">Collections</a></li> }
+        { userId && <li><a href="/logout">Logout</a></li> }
+      </ul>
     </div>
   );
 }

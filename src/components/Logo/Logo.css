@@ -1,0 +1,60 @@
+.Logo-container {
+	margin: 0 20px 20px;
+  display: flex;
+	width: 160px;
+  height: 70px;
+  background: black;
+  transform: perspective(300px) rotate(-5deg) skew(20deg);
+}
+.Logo-container:before{
+	content: '';
+  position: absolute;
+	top: 11%;
+  left: -10%;
+	width: 10%;
+  height: 100%;
+  background: yellow;
+  transform: rotate(0deg) skewY(-45deg);
+}
+.Logo-container:after{
+	content: 'Dɪᴠɪɴᴇ Cᴏʟʟᴇᴄᴛɪᴏɴ';
+  text-align: center;
+  font-size: 13px;
+  position: absolute;
+	bottom: -25%;
+  left: 9%;
+	width: 72%;
+  height: 28%;
+  background: white;
+  transform: rotate(45deg) skewY(-45deg);
+}
+.Logo-container .d-polygon {
+  background: gold;
+  width:100%;
+  height:100%;
+  animation-name: animate-d-polygon;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes animate-d-polygon {
+	0%   {clip-path: polygon(70% 12%, 100% 30%, 100% 70%, 70% 88%, 30% 88%, 30% 80%, 30% 20%, 30% 12%);}
+  100% {clip-path: polygon(70% 12%, 100% 30%, 100% 70%, 70% 88%, 30% 88%, 50% 80%, 50% 20%, 30% 12%);}
+}
+.Logo-container .c-polygon {
+	clip-path: polygon(0% 0%);
+  background: white;
+  width:100%;
+  height:100%;
+  animation-name: animate-c-polygon;
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes animate-c-polygon {
+	0%   {clip-path: polygon(10% 10%, 10% 10%, 30% 10%, 10% 30%, 10% 88%, 10% 88%);}
+  50%  {clip-path: polygon(12% 30%, 30% 12%, 70% 12%, 12% 70%, 30% 88%, 70% 88%);}
+  100% {
+  	clip-path: polygon(12% 30%, 30% 12%, 70% 12%, 12% 70%, 30% 88%, 70% 88%);
+  	background: yellow;
+  }
+}
