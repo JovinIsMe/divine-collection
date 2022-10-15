@@ -1,0 +1,70 @@
+html {
+ 	height: 2000px; 
+  font-size: 0;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.parallax {
+  position: fixed;
+}
+
+body {
+  font-size: 16px;
+}
+
+.image-1 {
+	top: 340px;
+	margin-top: -28rem;
+	left: 8%;
+}
+
+.image-2 {
+	top: 420px;
+	margin-top: -55rem;
+	left: 24%;
+}
+
+.image-3 {
+	top: 300px;
+	margin-top: -20rem;
+	left: 40%;
+	z-index: -3;
+}
+
+.image-4 {
+	top: 420px;
+	margin-top: -47rem;
+	left: 56%;
+}
+
+.image-5 {
+	top: 340px;
+	margin-top: -33rem;
+	left: 72%;
+}
+
+img {
+	width: 20%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+	z-index: -5;
+}
+
+@media(max-width: 650px) {
+	.parallax {
+		position: initial;
+	}
+
+  .image-1,
+	.image-2,
+	.image-3,
+	.image-4,
+	.image-5 {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin: 5%;
+		padding: 5%;
+		width: 80%;
+  }
+}
