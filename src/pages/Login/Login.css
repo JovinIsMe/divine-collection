@@ -1,0 +1,28 @@
+.Login-container {
+  width: fit-content;
+  margin: 20px;
+  padding: 15px 30px;
+  background-color: lightslategrey;
+  font-size: 20px;
+  color: white;
+}
+
+.Login-container table {
+  text-align: left;
+  width: 100%;
+}
+
+.Login-container table td input {
+  padding: 10px;
+  border-radius: 20px;
+  width: calc(100% - 25px);
+}
+
+.Login-container table td button {
+  font-size: 20px;
+  background: darkslategrey;
+  border-radius: 20px;
+  padding: 15px;
+  color: white;
+}
+
