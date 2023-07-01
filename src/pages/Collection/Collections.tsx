@@ -26,7 +26,7 @@ const Collection = () => {
 
   return (
     <>
-      <Header/>
+      { !!userId && userId === collection._user_id && <Header/> }
       { !!userId && userId === collection._user_id && <><a href={"/collections/" + collectionId + "/new"} >New Image</a><br></br></> }
 
       <div className='Collection' key={collectionId}>
